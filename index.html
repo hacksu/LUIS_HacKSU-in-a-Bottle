@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <meta charset="UTF-8">
     <title>HacKSU in a Bottle</title>
+
+    <script>
+        apis = [];
+        $(function() {
+            $("#input").keydown(handle_input)
+        });
+
+        function handle_get_api() {
+            var api = Math.floor(Math.random() * apis.length);
+            $("#api").html(apis[api]);
+            console.log(apis[api]);
+
+        }
+
+        function add_api(api) {
+            apis.push(api);
+            console.log(apis);
+
+        }
+
+        function handle_input(input) {
+            if (input.keyCode != 13) {
+                return 0;
+            }
+            $.getJSON("https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q="
+                    + encodeURIComponent($("#input").val()), function (result) {
+                console.log(result);
+                var intent = result.intents[0].intent;
+                if(intent == "GetAPI") {
+                    handle_get_api()
+                } else if (intent == "AddAPI") {
+                    add_api(result.entities[0].entity);
+                }
+                $("#input").val("");
+            })
+        }
+    </script>
+
 </head>
 <body>
+
+<input type="text" id="input" onkeydown="handle_input(this)"/>
+
+<p id="api"></p>
 
 </body>
 </html>
