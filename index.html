@@ -6,48 +6,63 @@
     <title>HacKSU in a Bottle</title>
 
     <script>
-        apis = [];
+        apis = ["OpenGraph", "Luis", "Kent Hack Enough"]; // just to start us off and so we can always ask for an api
+        var api = "https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q=";
+
         $(function() {
-            $("#input").keydown(handle_input)
+            $("#input").keydown(handle_input); // register a listener to handle key presses Todo: Find a better event to listen for
         });
-
-        function handle_get_api() {
-            var api = Math.floor(Math.random() * apis.length);
-            $("#api").html(apis[api]);
-            console.log(apis[api]);
-
-        }
-
-        function add_api(api) {
-            apis.push(api);
-            console.log(apis);
-
-        }
 
         function handle_input(input) {
             if (input.keyCode != 13) {
                 return 0;
             }
-            $.getJSON("https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q="
-                    + encodeURIComponent($("#input").val()), function (result) {
+            $.getJSON(api + encodeURIComponent($("#input").val()), function (result) {
                 console.log(result);
-                var intent = result.intents[0].intent;
+                var intent = result.intents[0].intent; // the first intent is the most likely
                 if(intent == "GetAPI") {
                     handle_get_api()
-                } else if (intent == "AddAPI") {
-                    add_api(result.entities[0].entity);
+                } else if (intent == "AddAPI" && result.entities.length > 0) {
+                    handle_add_api(result.entities[0].entity);
+                } else {
+                    handle_bad_input(); // catch all in cases where we can't do anything else
                 }
-                $("#input").val("");
-            })
+            });
+            $("#input").val(""); // clear the input field TODO: add error handling
         }
+
+        function handle_get_api() {
+            var api = Math.floor(Math.random() * apis.length);
+            $("#api").html(apis[api]);
+            $('#api-message').fadeIn(200).delay(5000).fadeOut(200); // fade the message in and out
+            console.log("We found " + apis[api]);
+
+        }
+
+        function handle_add_api(api) {
+            apis.push(api);
+            console.log("All APIs after adding " + api + ": " + apis);
+
+            $('#added-api').html(api);
+            $('#added').fadeIn(200).delay(1000).fadeOut(200);
+        }
+
+        function handle_bad_input(){
+            console.log("Got bad input");
+        }
+
     </script>
 
 </head>
 <body>
 
+
+<label for="input">What do you need?</label>
 <input type="text" id="input" onkeydown="handle_input(this)"/>
 
-<p id="api"></p>
+<p id="api-message" style="display: none;"> We hear <span id="api" style="font-weight:bold"></span> is neat</p>
+
+<p id="added" style="display: none;">Thanks We've recorded <span id="added-api" style="font-weight:bold"></span></p>
 
 </body>
 </html>
