@@ -1,0 +1,1076 @@
+{
+  "luis_schema_version": "1.0.0",
+  "name": "HacKSU in a Bottle",
+  "desc": "A app to record all the neat stuff we come up with",
+  "culture": "en-us",
+  "intents": [
+    "GetAPI",
+    "AddAPI",
+    "None"
+  ],
+  "entities": [
+    "API"
+  ],
+  "bing_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "do you have an api to tell me about?",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "can you show me an api?",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's a neat api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "flask is really neat",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "what's a good api to learn",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "jquery is the best",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "any good apis?",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "recommend an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "c++ is a good api",
+      "intent": "GetAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "what's the weather",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how warm is it today",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "is it night out",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how fast is a train",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "facebook has a great api",
+      "intent": "GetAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "python is a great api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "luis is the best thing i've seen",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "project oxford in general has a great api",
+      "intent": "AddAPI",
+      "entities": []
+    },
+    {
+      "text": "what's an library i should know",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "remember c++",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "record python",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "get an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add c++",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "i found i great api",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i found a great api java",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "i found adi",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "please add jsi",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "please record this",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "c++ needs recorded",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "do yo have any apis",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "this works great",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what is the time of day",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "can you recomend an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "c is great",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "luis is the best",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "what's the api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add this api, luis",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what's the best api ever",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "testing testing",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "word",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add lue as an api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add c",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "any apis i should know about",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's the weather like",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "c++ is a great",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add c as an api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "get api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "c++ is the best",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "what's for lunch",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "can you add c++",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "give me some info",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's a good api?",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add \"c++\"",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what's a good api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "give me an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "sql is a great api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "add json",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "0=a",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add j",
+      "intent": "AddAPI",
+      "entities": []
+    },
+    {
+      "text": "get a api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "as",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add json api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add api c",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add this api, c",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "0=g",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "0=t",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "add flask",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add this neat thing, js",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add the c++ api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add django",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "show me something new",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add luis",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add api",
+      "intent": "AddAPI",
+      "entities": []
+    },
+    {
+      "text": "add api facebook",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "add the api d",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add fai",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add ere",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add adsi",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add ai",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "add this nice api, ake",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add this nice api cbe",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "add this api eki",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "that was nice, here's an api, js",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 10,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "add d",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "show me something",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "i found a cool api here it is: test",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 9,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "add teg",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "give me a new api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's a good api these days",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "here's something i found get",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "twitter is pretty good",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "add twitter",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "twitter is a cool api",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 0,
+          "endPos": 0
+        }
+      ]
+    },
+    {
+      "text": "here's something, brew",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add ete",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "here's bei",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "here's something, bret",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "add this good api i found, c",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "i found a cool api, tet",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 6,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "here's a nice api, tei",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 7,
+          "endPos": 7
+        }
+      ]
+    },
+    {
+      "text": "this is working well",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i need an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "recommend something",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "i found something, bet",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "can you add json",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "add bing",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 1,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "what's a nice api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "give me something good",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "get a cool api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "give me something",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "wjat",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "find an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "any apis?",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's bad api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "can you add gre",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    },
+    {
+      "text": "can you recommend something",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "any apis",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what's great api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "add this api, js",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "what's a cool api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "anything else?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what about kittens",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i want to see a kitten",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "kittens please",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "kittens, kittens, kittens",
+      "intent": "None",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 4,
+          "endPos": 4
+        }
+      ]
+    },
+    {
+      "text": "give me kittens",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "help me get an api",
+      "intent": "GetAPI",
+      "entities": []
+    },
+    {
+      "text": "what about kittens?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i hear facebook is nice",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 2,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "can you record c",
+      "intent": "AddAPI",
+      "entities": [
+        {
+          "entity": "API",
+          "startPos": 3,
+          "endPos": 3
+        }
+      ]
+    }
+  ]
+}
