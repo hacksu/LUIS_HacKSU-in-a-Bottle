@@ -9,14 +9,7 @@
         apis = ["OpenGraph", "Luis", "Kent Hack Enough"]; // just to start us off and so we can always ask for an api
         var api = "https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q=";
 
-        $(function() {
-            $("#input").keydown(handle_input); // register a listener to handle key presses Todo: Find a better event to listen for
-        });
-
         function handle_input(input) {
-            if (input.keyCode != 13) {
-                return 0;
-            }
             $.getJSON(api + encodeURIComponent($("#input").val()), function (result) {
                 console.log(result);
                 var intent = result.intents[0].intent; // the first intent is the most likely
@@ -61,9 +54,10 @@
 </head>
 <body>
 
-
-<label for="input">What do you need?</label>
-<input type="text" id="input" onkeydown="handle_input(this)"/>
+<form  action="#" onsubmit="handle_input()">
+    <label for="input">What do you need?</label>
+    <input type="text" id="input"/>
+</form>
 
 <p id="api-message" style="display: none;"> We hear <span id="api" style="font-weight:bold"></span> is neat</p>
 
