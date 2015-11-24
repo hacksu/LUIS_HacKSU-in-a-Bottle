@@ -6,55 +6,40 @@
     <title>HacKSU in a Bottle</title>
 
     <script>
-        apis = ["OpenGraph", "Luis", "Kent Hack Enough"]; // just to start us off and so we can always ask for an api
-        var api = "https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q=";
+        apis = ["OpenGraph", "LUIS", "Kent Hack Enough"]; // just to start us off and so we can always ask for an api
+        var LUIS_API = "https://api.projectoxford.ai/luis/v1/application?id=4519cffc-c721-4add-8e8f-55f13c821438&subscription-key=779bedbe00204ab690fc8f5245527a22&q=";
 
-        function handle_input(input) {
-            $.getJSON(api + encodeURIComponent($("#input").val()), function (result) {
+        function handle_input() {
+            console.log($("#input").val());
+            $.getJSON(LUIS_API + encodeURIComponent($("#input").val()), function(result) {
                 console.log(result);
-                var intent = result.intents[0].intent; // the first intent is the most likely
+                var intent = result.intents[0].intent;
+
                 if(intent == "GetAPI") {
-                    handle_get_api()
+                    console.log("Getting API");
+                    var i = Math.floor(Math.random() * apis.length);
+                    $("#api").html(apis[i]);
+                    $('#api-message').fadeIn(200).delay(5000).fadeOut(200);
                 } else if (intent == "AddAPI" && result.entities.length > 0) {
-                    handle_add_api(result.entities[0].entity);
+                    var api = result.entities[0].entity;
+                    apis.push(api);
+
+                    $('#added-api').html(api);
+                    $('#added').fadeIn(200).delay(1000).fadeOut(200);
                 } else if(intent  ==  "Kittens") {
                     $('#kittens').fadeIn(200).delay(5000).fadeOut(200);
                 } else {
-                    handle_bad_input(); // catch all in cases where we can't do anything else
+                    console.log("Bad Input");
                 }
             });
-            $("#input").val(""); // clear the input field TODO: add error handling
+            $("#input").val("");
         }
-
-        function handle_get_api() {
-            var api = $("#api");
-            do {
-                var i = Math.floor(Math.random() * apis.length);
-            } while(apis[i] == api.html());
-            api.html(apis[i]);
-            $('#api-message').fadeIn(200).delay(5000).fadeOut(200); // fade the message in and out
-            console.log("We found " + apis[i]);
-
-        }
-
-        function handle_add_api(api) {
-            apis.push(api);
-            console.log("All APIs after adding " + api + ": " + apis);
-
-            $('#added-api').html(api);
-            $('#added').fadeIn(200).delay(1000).fadeOut(200);
-        }
-
-        function handle_bad_input(){
-            console.log("Got bad input");
-        }
-
     </script>
 
 </head>
 <body>
 
-<form  action="#" onsubmit="handle_input()">
+<form  onsubmit="handle_input(); return false;">
     <label for="input">What do you need?</label>
     <input type="text" id="input"/>
 </form>
